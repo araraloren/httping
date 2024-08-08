@@ -1,0 +1,47 @@
+[workspace]
+resolver = "2"
+members = ["packages/itdog", "packages/httping"]
+
+[workspace.dependencies]
+itdog = { path = "./packages/itdog", version = "0.2.0" }
+futures-util = "0.3.30"
+reqwest = { version = "0.12.5", features = [
+    "cookies",
+] }
+fastwebsockets = { version = "0.8.0", features = [
+    "upgrade",
+] }
+tokio = { version = "1.39", features = ["full"] }
+cote = { version = "0.5", features = ["log"] }
+md-5 = "0.10.6"
+color-eyre = { version = "0.6" }
+httpinglib = { path = "packages/httpinglib", version = "0.1.0" }
+serde = { version = "1.0", features = ["derive"] }
+prettytable-rs = "0.10.0"
+tracing-subscriber = { version = "0.3", features = [
+    "env-filter",
+    "registry",
+] }
+serde_json = "1.0"
+tokio-rustls = { version = "0.26", default-features = false, features = [
+    "tls12",
+    "ring",
+] }
+webpki-roots = "0.26"
+rustls = { version = "0.23.12", default-features = false, features = [
+    "std",
+    "tls12",
+    "ring",
+] }
+http = "1.1"
+hyper = "1.4"
+ratatui = { version = "0.27.0", features = [
+    "all-widgets",
+] }
+tracing = "0.1"
+async-trait = "0.1"
+
+
+[profile.release]
+lto = true
+codegen-units = 1

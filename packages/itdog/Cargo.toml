@@ -1,0 +1,28 @@
+[package]
+name = "itdog"
+version = "0.2.0"
+edition = "2021"
+authors = ["araraloren"]
+
+[dependencies]
+tokio.workspace = true
+reqwest.workspace = true
+futures-util.workspace = true
+md-5.workspace = true
+color-eyre.workspace = true
+prettytable-rs.workspace = true
+cote.workspace = true
+tracing-subscriber.workspace = true
+rustls.workspace = true
+webpki-roots.workspace = true
+fastwebsockets.workspace = true
+tokio-rustls.workspace = true
+http.workspace = true
+hyper.workspace = true
+serde_json.workspace = true
+serde.workspace = true
+tracing.workspace = true
+
+[[bin]]
+name = "itdog"
+path = "src/main.rs"

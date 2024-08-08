@@ -1,0 +1,19 @@
+[package]
+name = "httping"
+version = "0.1.0"
+edition = "2021"
+default = "httping"
+
+[dependencies]
+ratatui.workspace = true
+color-eyre.workspace = true
+tokio.workspace = true
+async-trait.workspace = true
+itdog.workspace = true
+tracing-subscriber.workspace = true
+cote.workspace = true
+tracing.workspace = true
+
+[[bin]]
+name = "httping"
+path = "bin/main.rs"
